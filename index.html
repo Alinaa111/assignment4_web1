@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Group Project – Home</title>
+  <link rel="stylesheet" href="styles/shared.css">
+</head>
+<body>
+  <header>
+    <div id="navbar"></div>
+  </header>
+  
+
+  <main>
+    <section>
+      <h1>Welcome to Our Fitness Website</h1>
+      <h3>Make your leisure time interesting</h3>
+    </section>
+    <div class="home_page-cards">
+      <div class="description1_card">
+          <div>
+            <p>Go horseback riding. Play tennis with your close people. Do activity for your health.</p>
+          </div>
+          <img src="images/home-page_2.jpg" alt="people are doing sport" >
+      </div>
+      <div class="description2_card">
+          <div>
+            <p>Spend time in water</p>
+          </div>
+          <img src="images/sport-reklama.jpg" alt="swimmers">
+      </div>
+      <div class="description3_card">
+          <div>
+            <p>Relax after your trainings</p>
+          </div>
+          <img src="images/img-relax.jpeg" alt="relax moment">
+      </div>
+    </div>
+
+  </main>
+
+  <br><br><br>
+  <footer>
+    <div id="contacts"> </div>
+  </footer>
+
+
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        document.getElementById("navToggle").addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("active");
+        });
+      });
+  </script>
+
+
+  <script>
+    fetch("contacts.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("contacts").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

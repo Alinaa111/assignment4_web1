@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Sport Club</title>
+  <link rel="stylesheet" href="../styles/shared.css">
+  <link rel="stylesheet" href="../styles/aliya2.css">
+</head>
+<body>
+    <header>
+    <div id="navbar"></div>
+  </header>
+ <aside>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/alina-fitness.html">Fitness Programs</a></li>
+      <li><a href="../pages/karima-membership.html">Membership</a></li>
+      <li><a href="../pages/karima-schedule.html">Schedule</a></li>
+      <li><a href="../pages/aisha-faq.html">FAQ</a></li>
+      <li><a href="../pages/aisha-about.html">About Us</a></li>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <li><a href="../pages/aliya-profile.html">Profile</a></li>
+      <li><a href="../pages/aliya-login.html">Login</a></li>
+    </ul>
+  </nav>
+</aside>
+<main>
+    <div class="profile-container">
+
+    <div class="profile-card">
+        <img src="../images/photo.jpg" alt="Profile picture" class="avatar">
+        <h2 class="name">Aliya</h2>
+        <p class="status">Active Member • Premium Plan</p>
+
+    <div class="profile-info">
+        <p><strong>Email:</strong> alnesssa@mail.com</p>
+        <p><strong>Location:</strong> Astana, Kazakhstan</p>
+        <p><strong>Member since:</strong> Sep 2025</p>
+    </div>
+    </div>
+
+
+<div class="progress-card">
+  <h3>My Progress</h3>
+
+  <div class="progress-stats">
+    <div class="stat-box">
+      <h4>120</h4>
+      <p>Total Sessions</p>
+    </div>
+
+    <div class="stat-box">
+      <h4>5</h4>
+      <p>Gyms Visited</p>
+    </div>
+
+    <div class="stat-box">
+      <h4>3 / 5</h4>
+      <p>Sessions This Week</p>
+    </div>
+  </div>
+</div>
+
+<div class="achievements-card">
+  <h3>Achievements</h3>
+  <div class="achievements-list">
+    <div class="achievement">
+      🏅 <span>First 10 Sessions</span>
+    </div>
+    <div class="achievement">
+      🏋️ <span>100 Sessions Attended</span>
+    </div>
+    <div class="achievement">
+      🏟️ <span>Visited 5 Different Gyms</span>
+    </div>
+    <div class="achievement">
+      🔥 <span>Weekly Streak: 4 Weeks</span>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="actions">
+        <a href="#" class="btn edit">Edit Profile</a>
+        <a href="#" class="btn logout">Logout</a>
+    </div>
+    </div>
+  </main>
+
+
+<footer>
+    <div id="contacts"></div>
+  </footer>
+
+  <script>
+    fetch("nav-pages.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        document.getElementById("navToggle").addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("active");
+        });
+      });
+  </script>
+
+<script>
+  fetch("../contacts.html") 
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contacts").innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

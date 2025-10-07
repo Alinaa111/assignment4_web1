@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule – Fitness Project</title>
+  <link rel="stylesheet" href="../styles/karima-schedule.css">
+  <link rel="stylesheet" href="../styles/shared.css">
+</head>
+<body>
+  <header>
+    <div id="navbar"></div>
+  </header>
+
+  <main>
+   <img src="../images/c62449db1715b12741432f3b8ac62073.jpg" alt="My photo" width="300">
+
+
+    <h1>Your Schedule</h1>
+    <p class="subtitle">Classes you have booked will appear here</p>
+
+    <div class="membership-container">
+      <div class="card blue">
+        <h2>No classes booked yet</h2>
+        <p class="per">Click below to explore available programs</p>
+        <button onclick="window.location.href='alina-fitness.html'">Find a Class</button>
+      </div>
+    </div>
+  </main>
+ <footer>
+        <div id="contacts"> </div>
+    </footer>
+  <script>
+    fetch("nav-pages.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        document.getElementById("navToggle").addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("active");
+        });
+      });
+  </script>
+  <script>
+    fetch("../contacts.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("contacts").innerHTML = data;
+      });
+  </script>
+
+
+</body>
+</html>
