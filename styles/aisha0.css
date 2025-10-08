@@ -4,81 +4,165 @@
 
 /* Reset */
 body {
-  margin: 0;
-  margin-top: 100px;
-  padding: 0;
-  background-color: #ffffff;
-  color: #161618;
-  font-family: 'Bond', sans-serif;
+margin: 0;
+margin-top: 100px;
+padding: 0;
+background-color: #ffffff;
+color: #161618;
+font-family: 'Bond', sans-serif;
 }
 
 /* FAQ Section */
 .faq {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
+max-width: 800px;
+margin: 60px auto;
+padding: 0 20px;
 }
 
 .faq-heading {
-  font-family: 'Helvetica Now Display', sans-serif;
-  font-weight: 700;
-  font-size: 2.3rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #161618;
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 700;
+font-size: 2.3rem;
+text-align: center;
+margin-bottom: 40px;
+color: #161618;
 }
 
-/* FAQ Items */
-.faq-item {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 20px 0;
+
+.carousel-item img {
+height: 300px;
+max-width: 600px;
+margin: 0 auto;
+object-fit: contain;
+border-radius: 0.5rem;
 }
 
-.faq-item input {
-  display: none;
+.carousel-caption h5 {
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 600;
+font-size: 1rem; /* Smaller font size */
 }
 
-.faq-question {
-  display: block;
-  font-family: 'Helvetica Now Display', sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #3447F6;
-  cursor: pointer;
-  position: relative;
-  padding-right: 25px;
+.carousel-caption p {
+font-size: 0.85rem; /* Smaller description text */
 }
 
-/* Plus/Minus icon */
-.faq-question::after {
-  content: '+';
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 1.3rem;
-  color: #3447F6;
-  transition: transform 0.3s ease;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+width: 0.8rem;
+height: 0.8rem;
 }
 
-.faq-item input:checked + .faq-question::after {
-  content: '-';
-  transform: rotate(180deg);
+
+.carousel-indicators li {
+width: 4px;
+height: 4px;
+border-radius: 50%;
+margin: 0 4px;
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+/* Bootstrap 4.6 Accordion Styling */
+.accordion .card {
+border: 1px solid #e0e0e0;
+margin-bottom: 0.5rem;
 }
 
-.faq-item input:checked ~ .faq-answer {
-  max-height: 500px; /* enough for long answers */
-  margin-top: 15px;
+.accordion .card-header {
+background-color: #ffffff;
+border-bottom: none;
+padding: 0;
 }
 
-.faq-answer p {
-  font-family: 'Bond', sans-serif;
-  font-size: 1rem;
-  color: #46464A;
-  line-height: 1.6;
+.accordion .btn-link {
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 600;
+font-size: 1.1rem;
+color: #3447F6;
+text-decoration: none;
+padding: 1rem 1.25rem;
+width: 100%;
+text-align: left;
+position: relative;
+}
+
+.accordion .btn-link:hover {
+color: #2537d5;
+text-decoration: none;
+}
+
+.accordion .btn-link:focus {
+box-shadow: none;
+}
+
+/* Add plus/minus icon */
+.accordion .btn-link::after {
+content: '+';
+position: absolute;
+right: 1.25rem;
+font-size: 1.5rem;
+font-weight: 400;
+transition: transform 0.3s ease;
+}
+
+.accordion .btn-link:not(.collapsed)::after {
+content: '−';
+}
+
+.accordion .card-body {
+font-family: 'Bond', sans-serif;
+font-size: 1rem;
+color: #46464A;
+line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.faq-heading {
+font-size: 2rem;
+}
+  
+.carousel-item img {
+height: 250px;
+max-width: 500px;
+}
+  
+.accordion .btn-link {
+font-size: 1rem;
+}
+}
+
+@media (max-width: 576px) {
+.faq-heading {
+font-size: 1.75rem;
+}
+  
+.carousel-item img {
+height: 200px;
+max-width: 100%;
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+width: 1.5rem;
+height: 1.5rem;
+}
+  
+.carousel-indicators li {
+width: 6px;
+height: 6px;
+}
+  
+.accordion .btn-link {
+font-size: 0.95rem;
+padding: 0.75rem 1rem;
+}
+  
+.carousel-caption h5 {
+font-size: 0.9rem;
+}
+  
+.carousel-caption p {
+font-size: 0.75rem;
+}
 }
