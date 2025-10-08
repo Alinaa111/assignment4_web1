@@ -3,76 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Membership – Fitness Project</title>
-  <link rel="stylesheet" href="../styles/karima-membership.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/shared.css">
+  <link rel="stylesheet" href="../styles/karima-membership.css">
 </head>
 <body>
-    <header>
-        <div id="navbar"></div>
-    </header>
+  <header>
+    <div id="navbar"></div>
+  </header>
   
+  <main class="container text-center mt-5 mb-5">
+    <h1 class="mb-4">Choose your membership</h1>
+    <p class="subtitle mb-5">There are free guests for friends in each membership</p>
 
-  <main>
-    <h1>Chose your membership</h1>
-    <p class="subtitle">There are free guests for friends in each membership</p>
-
-    <div class="membership-container">
-      <div class="card green">
-         <img src="../images/90.png" alt="3 months membership" class="corner-imagee">
-        <h2>3 month</h2>
-        <p class="price">48 330 ₸</p>
-        <p class="per month">per month</p>
-        <ul>
-          <li>144+ studios</li>
-          <li>5 guests</li>
-        </ul>
-        <button>Purchase</button>
+    <!-- Bootstrap Cards (Task 8) -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card green p-4 position-relative">
+          <img src="../images/90.png" alt="3 months membership" class="corner-imagee">
+          <h2 class="mb-3">3 month</h2>
+          <p class="price fs-4 fw-bold mb-2">48 330 ₸</p>
+          <p class="per mb-3">per month</p>
+          <ul class="mb-4 list-unstyled">
+            <li>144+ studios</li>
+            <li>5 guests</li>
+          </ul>
+          <button class="btn btn-light">Purchase</button>
+        </div>
       </div>
 
-      <div class="card pink">
-        <img src="../images/180.png" alt="3 months membership" class="corner-imagee">
-        <h2>6 month</h2>
-        <p class="price">32 498 ₸</p>
-        <p class="per month">per month</p>
-        <ul>
-          <li>144+ studios</li>
-          <li>8 guests</li>
-        </ul>
-        <button>Purchase</button>
+      <div class="col-md-4">
+        <div class="card pink p-4 position-relative">
+          <img src="../images/180.png" alt="6 months membership" class="corner-imagee">
+          <h2 class="mb-3">6 month</h2>
+          <p class="price fs-4 fw-bold mb-2">32 498 ₸</p>
+          <p class="per mb-3">per month</p>
+          <ul class="mb-4 list-unstyled">
+            <li>144+ studios</li>
+            <li>8 guests</li>
+          </ul>
+          <button class="btn btn-light">Purchase</button>
+        </div>
       </div>
 
-      <div class="card blue">
-        <img src="../images/365.png" alt="3 months membership" class="corner-image">
-        <h2>12 month</h2>
-        <p class="price">22 499 ₸</p>
-        <p class="per">per month</p>
-        <ul>
-          <li>144+ studios</li>
-          <li>12 guests</li>
-        </ul>
-        <button>Purchase</button>
+      <div class="col-md-4">
+        <div class="card blue p-4 position-relative">
+          <img src="../images/365.png" alt="12 months membership" class="corner-image">
+          <h2 class="mb-3">12 month</h2>
+          <p class="price fs-4 fw-bold mb-2">22 499 ₸</p>
+          <p class="per mb-3">per month</p>
+          <ul class="mb-4 list-unstyled">
+            <li>144+ studios</li>
+            <li>12 guests</li>
+          </ul>
+          <button class="btn btn-light">Purchase</button>
+        </div>
       </div>
-
-      
     </div>
   </main>
 
-
   <footer>
-        <div id="contacts"> </div>
-    </footer>
+    <div id="contacts"></div>
+  
+  </footer>
+  
 
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
   <script>
     fetch("nav-pages.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
-
-        document.getElementById("navToggle").addEventListener("click", function () {
-          document.getElementById("navMenu").classList.toggle("active");
+    
         });
-      });
   </script>
 
   <script>
@@ -82,6 +90,5 @@
         document.getElementById("contacts").innerHTML = data;
       });
   </script>
-
 </body>
 </html>
