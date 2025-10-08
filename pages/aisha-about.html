@@ -1,77 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - BirQadam</title>
-    <link rel="stylesheet" href="../styles/shared.css">
-    <link rel="stylesheet" href="../styles/aisha.css">
-    <link href="https://fonts.cdnfonts.com/css/helvetica-now-display" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/bond" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/shared.css">
+<link rel="stylesheet" href="../styles/aisha.css">
+<link href="https://fonts.cdnfonts.com/css/helvetica-now-display" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/bond" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div id="navbar"></div>
-    </header>
-    
-    <main class="main-content">
-        <section class="about">
-            <h1 class="about-heading">BirQadam – One Step Forward</h1>
-            <p class="about-text">
-                BirQadam is a fitness and lifestyle platform inspired by the idea of making sport accessible to everyone. 
-                Just like 1fit, it brings together a wide range of activities – from yoga and swimming to crossfit and martial arts – 
-                all in one place. With BirQadam, staying active becomes simple, flexible, and enjoyable.
-            </p>
-            <div class="sliding-icons">
-              <div class="icon-item">
-                <img src="../images/1asd.png" alt="Yoga">
-                <div class="icon-caption">Martial Arts</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/2asd.png" alt="Gym">
-                <div class="icon-caption">Gym</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/3asd.png" alt="Yoga">
-                <div class="icon-caption">Yoga</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/4asd.png" alt="Swimming">
-                <div class="icon-caption">Swimming</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/5asd.png" alt="Dance">
-                <div class="icon-caption">Dance</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/6asd.png" alt="Pilates">
-                <div class="icon-caption">Pilates</div>
-              </div>
-              <div class="icon-item">
-                <img src="../images/7asd.png" alt="Adrenaline sports">
-                <div class="icon-caption">Adrenaline sports</div>
-              </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div id="contacts"></div>
-    </footer>
-  
-    <script>
-        fetch("../nav.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("navbar").innerHTML = data;
-          });
-    </script>
-    <script>
-        fetch("../contacts.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("contacts").innerHTML = data;
-          });
-    </script>
+<header>
+<nav id="navbar" aria-label="Main navigation"></nav>
+</header>
+
+<main class="main-content">
+<!-- Hero Section with Bootstrap Container -->
+<section class="about py-5">
+<div class="container">
+<h1 class="about-heading text-center mb-4">BirQadam – One Step Forward</h1>
+<p class="about-text text-center mx-auto px-3 mb-5">
+BirQadam is a fitness and lifestyle platform inspired by the idea of making sport accessible to everyone.
+Just like 1fit, it brings together a wide range of activities – from yoga and swimming to crossfit and martial arts –
+all in one place. With BirQadam, staying active becomes simple, flexible, and enjoyable.
+</p>
+</div>
+</section>
+
+<!-- Bootstrap Carousel Section -->
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-4 mb-lg-5">Our Activities</h2>
+<div id="activitiesCarousel" class="carousel slide" data-ride="carousel" aria-label="Activities carousel">
+<!-- Carousel Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#activitiesCarousel" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+<li data-target="#activitiesCarousel" data-slide-to="1" aria-label="Slide 2"></li>
+<li data-target="#activitiesCarousel" data-slide-to="2" aria-label="Slide 3"></li>
+<li data-target="#activitiesCarousel" data-slide-to="3" aria-label="Slide 4"></li>
+<li data-target="#activitiesCarousel" data-slide-to="4" aria-label="Slide 5"></li>
+<li data-target="#activitiesCarousel" data-slide-to="5" aria-label="Slide 6"></li>
+<li data-target="#activitiesCarousel" data-slide-to="6" aria-label="Slide 7"></li>
+</ol>
+
+<!-- Carousel Items -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="../images/1asd.png" class="d-block w-100" alt="Martial Arts activity">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Martial Arts</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/2asd.png" class="d-block w-100" alt="Gym workout">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Gym</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/3asd.png" class="d-block w-100" alt="Yoga session">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Yoga</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/4asd.png" class="d-block w-100" alt="Swimming pool">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Swimming</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/5asd.png" class="d-block w-100" alt="Dance class">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Dance</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/6asd.png" class="d-block w-100" alt="Pilates exercise">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Pilates</h5>
+</div>
+</div>
+<div class="carousel-item">
+<img src="../images/7asd.png" class="d-block w-100" alt="Adrenaline sports">
+<div class="carousel-caption d-none d-md-block">
+<h5 class="bg-primary px-3 py-2 rounded d-inline-block">Adrenaline Sports</h5>
+</div>
+</div>
+
+<!-- Carousel Controls -->
+<a class="carousel-control-prev" href="#activitiesCarousel" role="button" data-slide="prev" aria-label="Previous slide">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#activitiesCarousel" role="button" data-slide="next" aria-label="Next slide">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Bootstrap Grid Layout Section (Task 3 - Two Columns) -->
+<section class="py-5">
+<div class="container">
+<h2 class="text-center mb-4 mb-lg-5">Why Choose BirQadam?</h2>
+<div class="row">
+<article class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mb-md-0">
+<div class="p-3 p-lg-4 h-100 border rounded shadow-sm">
+<h3 class="h4 mb-3">Flexibility & Variety</h3>
+<p class="mb-0">Access dozens of studios and activities with one subscription. Try something new every day – from yoga to martial arts, swimming to crossfit.</p>
+</div>
+</article>
+<article class="col-12 col-sm-12 col-md-6 col-lg-6">
+<div class="p-3 p-lg-4 h-100 border rounded shadow-sm">
+<h3 class="h4 mb-3">Affordable & Simple</h3>
+<p class="mb-0">No need for multiple memberships. One plan, unlimited possibilities. Save money while staying active and healthy.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Bootstrap Grid Layout Section -->
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-4 mb-lg-5">What Makes Us Different</h2>
+<div class="row">
+<article class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4 mb-md-0">
+<div class="p-3 p-lg-4 h-100 border rounded shadow-sm bg-white">
+<h3 class="h5 mb-3">Community First</h3>
+<p class="mb-0">Join a vibrant community of fitness enthusiasts who support and motivate each other.</p>
+</div>
+</article>
+<article class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4 mb-md-0">
+<div class="p-3 p-lg-4 h-100 border rounded shadow-sm bg-white">
+<h3 class="h5 mb-3">Expert Instructors</h3>
+<p class="mb-0">Learn from certified professionals who are passionate about helping you reach your goals.</p>
+</div>
+</article>
+<article class="col-12 col-sm-12 col-md-4 col-lg-4">
+<div class="p-3 p-lg-4 h-100 border rounded shadow-sm bg-white">
+<h3 class="h5 mb-3">No Commitment</h3>
+<p class="mb-0">Cancel anytime, no questions asked. We believe fitness should be on your terms.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="mt-5">
+<div id="contacts"></div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script>
+fetch("nav-pages.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("navbar").innerHTML = data;
+});
+</script>
+<script>
+fetch("../contacts.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("contacts").innerHTML = data;
+});
+</script>
 </body>
 </html>

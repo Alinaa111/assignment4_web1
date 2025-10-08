@@ -1,162 +1,169 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-now-display');
 @import url('https://fonts.cdnfonts.com/css/bond');
 
+/* Reset - keeping only essential styles, Bootstrap handles spacing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #ffffff;
-    color: #161618;
-    font-family: 'Bond', sans-serif;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+background-color: #ffffff;
+color: #161618;
+font-family: 'Bond', sans-serif;
 }
 
-
+/* Header - minimal custom styling, Bootstrap handles spacing */
 header #navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
-.icon-item {
-    position: relative;
-    height: 100%;
-    flex-shrink: 0;
-}
-
-.icon-item img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.icon-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(61, 77, 255, 0.9);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Bond', sans-serif;
-    font-size: 0.9rem;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.icon-item:hover .icon-caption {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.icon-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
-
-/* Remove any default spacing that might cause the blue stripe */
-header::after,
-header::before,
-#navbar::after,
-#navbar::before {
-    display: none;
-}
-
-#navbar > * {
-    margin: 0;
-}
-
+/* Main content area */
 .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+flex: 1;
 }
 
-.about {
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
+/* About section styling */
 .about-heading {
-    font-family: 'Helvetica Now Display', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #161618;
-    text-align: center;
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 700;
+font-size: 2.5rem;
+color: #161618;
 }
 
 .about-text {
-    font-family: 'Bond', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #46464A;
-    text-align: center;
-    max-width: 700px;
+font-family: 'Bond', sans-serif;
+font-size: 1.1rem;
+line-height: 1.6;
+color: #46464A;
+max-width: 700px;
 }
 
-.sliding-icons {
-    display: flex;
-    gap: 30px;
-    height: 120px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
+.carousel-item img {
+height: 300px;
+max-width: 600px;
+margin: 0 auto;
+object-fit: contain;
+border-radius: 0.5rem;
 }
 
-.sliding-icons img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-    animation: slide 15s linear infinite;
+.carousel-caption {
+background-color: rgba(52, 71, 246, 0.85) !important;
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.carousel-caption h5 {
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 600;
+font-size: 1rem; 
 }
 
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+width: 0.8rem;
+height: 0.8rem;
+}
+
+
+.carousel-indicators li {
+width: 4px;
+height: 4px;
+border-radius: 50%;
+margin: 0 4px;
+}
+
+/* Grid section cards */
+.border {
+border-color: #e0e0e0 !important;
+}
+
+.shadow-sm {
+box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Custom primary color to match brand */
+.text-primary,
+.btn-primary {
+color: #3447F6 !important;
+}
+
+.bg-primary {
+background-color: #3447F6 !important;
+}
+
+.btn-primary {
+background-color: #3447F6 !important;
+border-color: #3447F6 !important;
+}
+
+.btn-primary:hover {
+background-color: #2537d5 !important;
+border-color: #2537d5 !important;
+}
+
+.btn-outline-primary {
+color: #3447F6 !important;
+border-color: #3447F6 !important;
+}
+
+.btn-outline-primary:hover {
+background-color: #3447F6 !important;
+border-color: #3447F6 !important;
+color: #ffffff !important;
+}
+
+/* Typography for grid sections */
+.h4, .h5 {
+font-family: 'Helvetica Now Display', sans-serif;
+font-weight: 600;
+}
+
+/* Footer */
 footer {
-    flex-shrink: 0;
-    background-color: #f5f5f5;
-    padding: 40px 20px;
-    margin-top: auto;
+flex-shrink: 0;
+background-color: #f5f5f5;
 }
 
-/* Responsive design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .about-heading {
-        font-size: 2rem;
-    }
-    
-    .about-text {
-        font-size: 1rem;
-    }
-    
-    .sliding-icons {
-        height: 80px;
-    }
+.about-heading {
+font-size: 2rem;
 }
 
+.about-text {
+font-size: 1rem;
+}
+
+.carousel-item img {
+height: 250px;
+max-width: 500px;
+}
+}
+
+@media (max-width: 576px) {
+.about-heading {
+font-size: 1.75rem;
+}
+
+.carousel-item img {
+height: 200px;
+max-width: 100%;
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+width: 1.5rem;
+height: 1.5rem;
+}
+  
+.carousel-indicators li {
+width: 6px;
+height: 6px;
+}
+}
