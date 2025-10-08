@@ -79,7 +79,15 @@
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   .program-card h2 { font-size: 1.4rem; }
   .program-card p { font-size: 1rem; }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
 }
